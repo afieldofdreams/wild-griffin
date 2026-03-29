@@ -1,0 +1,16 @@
+{
+  "name": "wild-griffin",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "api": "npm run dev --workspace=@wild-griffin/api",
+    "mobile": "npm run start --workspace=@wild-griffin/mobile",
+    "db:migrate": "npm run migrate --workspace=@wild-griffin/api",
+    "db:seed": "npm run seed --workspace=@wild-griffin/api",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down"
+  }
+}
